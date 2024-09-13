@@ -1,0 +1,19 @@
+.headerContainer{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    background-color: blueviolet;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.titleHeader{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.darkMode{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}

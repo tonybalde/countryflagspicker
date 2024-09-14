@@ -1,0 +1,83 @@
+/* 
+.mainContentContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 0 100px;
+  }
+  
+  
+  input[type="search"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 350px;
+    border: 1px solid #222;
+    border-radius: 5px;
+  }
+  
+
+  .dropdownCountries {
+    position: relative;
+  }
+  
+
+  .dropdownButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+
+  .dropdownContent {
+    
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+  }
+  
+
+  .dropdownContent a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+
+  .dropdownContent a:hover {
+    background-color: #f1f1f1;
+  }
+  
+
+  .dropdownCountries:hover .dropdownContent {
+    display: block;
+  }
+  
+  .dropdownCountries:hover .dropdownButton {
+    background-color: #0056b3;
+  }
+  
+  */
+
+  .mainContent {
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .lightMain {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .darkMain {
+    background-color: #202c37;
+    color: #fff;
+  }

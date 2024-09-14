@@ -1,4 +1,4 @@
-/* .headerContainer{
+.headerContainer{
     display: flex;
     text-align: center;
     justify-content: space-between;
@@ -7,6 +7,7 @@
     padding-right: 100px;
     height: 80px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .titleHeader{
@@ -24,16 +25,8 @@
 
 .darkModeText{
     font-weight: 500;
-} */
-
-.headerContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
+} 
+ 
   .lightHeader {
     background-color: #fff;
     color: #333;

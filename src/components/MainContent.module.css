@@ -137,3 +137,57 @@
   align-items: center;
   gap: 22px;
 }
+
+.flagCard{
+  border: 1px solid #222;
+  border-radius: 8px;
+  width: 320px;
+  height: 380px; 
+}
+
+.flagImage{
+  height: 160px;
+  width: 320px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.countryName{
+  margin-bottom: 15px;
+}
+
+.cardContent{
+  padding: 20px 20px 40px 20px;
+}
+
+.countryData{
+  line-height: 1.8rem;
+}
+
+
+@media (max-width:375px) {
+  .mainContentContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    margin: 0;
+  }
+   
+  input[type="search"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .dropdownButton{
+    margin: 20px 0;
+    width: 200px;
+  }
+  
+}

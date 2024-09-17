@@ -91,7 +91,7 @@ function MainContent({ isDarkMode }) {
             onBlur={handleBlur}
           />
         </div>
-        <div className={styles.dropdownCountries}>
+          <div className={styles.dropdownCountries}>
           <button className={styles.dropdownButton} onClick={toggleDropdown}>
             Filter by Region
           </button>
@@ -118,9 +118,11 @@ function MainContent({ isDarkMode }) {
                       />
                       <div className={styles.cardContent}>
                           <h2 className={styles.countryName}>{country.name}</h2>
-                          <p><strong>Population:</strong> {country.population.toLocaleString()}</p>
-                          <p><strong>Region:</strong> {country.region}</p>
-                          <p><strong>Capital:</strong> {country.capital}</p>
+                          <div className={styles.countryData}>
+                            <p><strong>Population:</strong> {country.population.toLocaleString()}</p>
+                            <p><strong>Region:</strong> {country.region}</p>
+                            <p><strong>Capital:</strong> {country.capital}</p>
+                          </div>
                       </div>
                   </div>
               ))}

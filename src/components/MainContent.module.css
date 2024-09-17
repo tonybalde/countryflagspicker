@@ -8,17 +8,32 @@
   }
 
 /* New styles for the search input */
-.searchInput {
-  padding: 10px 10px 10px 30px; /* 30px left padding to move text and cursor */
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+
+.inputWrapper {
+  position: relative;
   width: 300px; /* Adjust as needed */
 }
 
+.searchInput {
+  width: 100%;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 10px 10px 50px;
+  transition: all 0.3s ease;
+}
+
 .searchInput::placeholder {
-  color: #888;
+  transition: all 0.3s ease;
   padding-left: 50px;
+}
+
+.searchInput.focused {
+  padding-left: 50px;
+}
+
+.searchInput.focused::placeholder {
+  opacity: 0;
 }
 
 /* Styles for dark mode */

@@ -73,6 +73,12 @@
   gap: 8px;
 }
 
+.borderCountryButton{
+  height: 32px;
+  width: 150px;
+  border-radius: 5px;
+  border: 1px solid #222;
+}
 
 /* Styles for dark mode */
 .darkMain .searchInput {

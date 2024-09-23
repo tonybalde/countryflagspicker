@@ -120,6 +120,7 @@ function MainContent({ isDarkMode }) {
             </p>
             
             <h2>Border Countries:</h2>  
+            <div className={styles.countryBorderContainer}>
             {selectedCountry.borders.length > 0 ? (
               selectedCountry.borders.map((borderCode) => {
                 const borderCountry = findCountryByAlpha3Code(borderCode); // Find the full country data
@@ -136,6 +137,7 @@ function MainContent({ isDarkMode }) {
             ) : (
               <p>No border countries</p>
             )}
+            </div>
           </div>
         ) : (
           <div className={styles.cardsContainer}>

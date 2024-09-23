@@ -44,6 +44,31 @@
   pointer-events: none;
 }
 
+.backButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10px;
+  width: 100px;
+  height: 32px;
+  border-radius: 5px;
+  border: 1px solid #222;
+}
+
+.countryDetails{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+.countryDataDetail{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+ 
+}
+
 
 /* Styles for dark mode */
 .darkMain .searchInput {

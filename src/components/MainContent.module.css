@@ -57,7 +57,7 @@
 
 .countryDetails{
   display: flex;
-  
+  gap: 1rem;
   justify-content: space-around;
   padding: 20px 0;
 }
@@ -75,6 +75,7 @@
 .detailsColumns{
   display: flex;
   margin: 2rem 0;
+  gap: 1rem;
 }
 
 .detailsCol1, .detailsCol2 {
@@ -85,7 +86,9 @@
 
 .countryBorderContainer{
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
+  margin-top: 1rem;
 }
 
 .borderCountryButton{
@@ -203,6 +206,14 @@
   border-top-right-radius: 8px;
   padding-right: 2px;
 }
+
+.flagImageDetails{
+  width: 500px; 
+  height: 450px;
+  padding-right: 2px;
+  border-radius: 12px;
+}
+
 
 .countryName{
   margin-bottom: 15px;

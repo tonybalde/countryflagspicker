@@ -103,7 +103,7 @@ function MainContent({ isDarkMode }) {
             <img 
               src={selectedCountry.flags.png} 
               alt={`Flag of ${selectedCountry.name}`}
-              className={styles.flagImage}
+              className={styles.flagImageDetails}
             />
             <div className={styles.detailedCountry}>
               <h2>{selectedCountry.name}</h2>

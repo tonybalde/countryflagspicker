@@ -105,48 +105,54 @@ function MainContent({ isDarkMode }) {
               alt={`Flag of ${selectedCountry.name}`}
               className={styles.flagImage}
             />
-            <h2>{selectedCountry.name}</h2>
-            
-            <p><strong>Native Name:</strong> {selectedCountry.nativeName.toLocaleString()}</p>
-            <p><strong>Population:</strong> {selectedCountry.population.toLocaleString()}</p>
-            <p><strong>Region:</strong> {selectedCountry.region}</p>
-            <p><strong>Sub Region:</strong> {selectedCountry.subregion}</p>
-            <p><strong>Capital:</strong> {selectedCountry.capital}</p>
-              
-            <p><strong>Top Level Domain:</strong> {selectedCountry.topLevelDomain.toLocaleString()}</p>
-            <p><strong>Currencies:</strong> 
-              {selectedCountry.currencies.map(currency => (
-                <span key={currency.code}>
-                  {currency.name} ({currency.symbol})
-                </span>
-              ))}
-            </p>
-            <p><strong>Languages:</strong> 
-              {selectedCountry.languages.map(language => (
-                <span key={language.iso639_1}>
-                  {language.name} ({language.nativeName})
-                </span>
-              ))}
-            </p>
-            
-            <h2>Border Countries:</h2>  
-            <div className={styles.countryBorderContainer}>
-            {selectedCountry.borders && selectedCountry.borders.length > 0 ? (
-              selectedCountry.borders.map((borderCode) => {
-                const borderCountry = findCountryByAlpha3Code(borderCode); // Find the full country data
-                return (
-                  <button 
-                    key={borderCode} 
-                    onClick={() => handleCountryClick(borderCountry)} // Handle click to display the country
-                    className={styles.borderCountryButton}
-                  >
-                    {borderCountry ? borderCountry.name : borderCode}
-                  </button>
-                );
-              })
-            ) : (
-              <p>No border countries</p>
-            )}
+            <div className={styles.detailedCountry}>
+              <h2>{selectedCountry.name}</h2>
+              <div className={styles.detailsColumns}>
+                <div className={styles.detailsCol1}>
+                  <p><strong>Native Name:</strong> {selectedCountry.nativeName.toLocaleString()}</p>
+                  <p><strong>Population:</strong> {selectedCountry.population.toLocaleString()}</p>
+                  <p><strong>Region:</strong> {selectedCountry.region}</p>
+                  <p><strong>Sub Region:</strong> {selectedCountry.subregion}</p>
+                  <p><strong>Capital:</strong> {selectedCountry.capital}</p>
+                </div>  
+                <div className={styles.detailsCol2}>
+                  <p><strong>Top Level Domain:</strong> {selectedCountry.topLevelDomain.toLocaleString()}</p>
+                  <p><strong>Currencies:</strong> 
+                    {selectedCountry.currencies.map(currency => (
+                      <span key={currency.code}>
+                        {currency.name} ({currency.symbol})
+                      </span>
+                    ))}
+                  </p>
+                  <p><strong>Languages:</strong> 
+                    {selectedCountry.languages.map(language => (
+                      <span key={language.iso639_1}>
+                        {language.name} ({language.nativeName})
+                      </span>
+                    ))}
+                  </p>
+                </div>
+              </div>  
+              <h2>Border Countries:</h2>  
+              <div className={styles.countryBorderContainer}>
+              {selectedCountry.borders && selectedCountry.borders.length > 0 ? (
+                selectedCountry.borders.map((borderCode) => {
+                  const borderCountry = findCountryByAlpha3Code(borderCode); // Find the full country data
+                  return (
+                    <button 
+                      key={borderCode} 
+                      onClick={() => handleCountryClick(borderCountry)} // Handle click to display the country
+                      className={styles.borderCountryButton}
+                    >
+                      {borderCountry ? borderCountry.name : borderCode}
+                    </button>
+                  );
+                })
+              ) : (
+                <p>No border countries</p>
+              )}
+
+            </div>    
             </div>
           </div>
         ) : (

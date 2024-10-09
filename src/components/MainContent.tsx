@@ -1,3 +1,4 @@
+
 import React, { useState, useRef } from 'react';
 import { IoIosSearch, IoIosArrowRoundBack } from 'react-icons/io';
 import styles from './MainContent.module.css';
@@ -39,7 +40,7 @@ function MainContent({ isDarkMode }) {
   };
 
   const handleRegionClick = (region) => {
-    setSelectedRegion(region); // Selecciona la región
+    setSelectedRegion(region); // Selecciona la región (vacío significa mostrar todos)
     setIsDropdownOpen(false); // Cierra el dropdown
   };
 
@@ -78,8 +79,9 @@ function MainContent({ isDarkMode }) {
             </button>
             {isDropdownOpen && (
               <div className={styles.dropdownContent}>
+                <a onClick={() => handleRegionClick('')} href="#all">All regions</a>
                 <a onClick={() => handleRegionClick('Africa')} href="#africa">Africa</a>
-                <a onClick={() => handleRegionClick('Americas')} href="#america">Americas</a>
+                <a onClick={() => handleRegionClick('Americas')} href="#americas">Americas</a>
                 <a onClick={() => handleRegionClick('Asia')} href="#asia">Asia</a>
                 <a onClick={() => handleRegionClick('Europe')} href="#europe">Europe</a>
                 <a onClick={() => handleRegionClick('Oceania')} href="#oceania">Oceania</a>

@@ -52,15 +52,18 @@
     margin-left: 8px;
   }
 
-  @media screen and (max-width:375px){
+  @media screen and (min-width:320px) and (max-width:765px) {
     
     .headerContainer{
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      padding-left: 10px;
+      padding-right: 10px;
       width: 100%;
     }
    
     .titleHeader{
-      font-size:12px;
+      font-size: 18px;
     }
   }

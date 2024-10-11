@@ -259,4 +259,25 @@
     width: 200px;
   }
   
+  .countryDetails{
+    flex-direction: column;
+  }
+
+  .flagImageDetails{
+    width: 100%;
+    height: auto;
+    border: 1px solid #222;
+    padding-right: revert-layer;
+  }
+
+  .detailsColumns{
+    flex-direction: column;
+  }
+
+  .countryBorderContainer{
+    display: flex;
+    justify-content: center;
+  }
+
+
   }

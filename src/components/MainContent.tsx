@@ -190,7 +190,8 @@
 // }
 
 // export default MainContent;
-import React, { useState, useRef } from 'react';
+
+import { useState, useRef } from 'react';
 import { IoIosSearch, IoIosArrowRoundBack } from 'react-icons/io';
 import styles from './MainContent.module.css';
 import data from "../../data/data.json";
@@ -214,7 +215,7 @@ interface Country {
   population: number;
   region: string;
   subregion: string;
-  capital: string;
+  capital?: string;
   topLevelDomain: string[];
   currencies: Currency[];
   languages: Language[];
@@ -268,13 +269,13 @@ function MainContent({ isDarkMode }: MainContentProps): JSX.Element {
     setIsDropdownOpen(false);
   };
 
-  const filteredCountries = data.filter((country: Country) => 
+  const filteredCountries = (data as Country[]).filter((country: Country) => 
     country.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
     (!selectedRegion || country.region === selectedRegion)
   );
 
   const findCountryByAlpha3Code = (code: string): Country | undefined => {
-    return data.find((country: Country) => country.alpha3Code === code);
+    return (data as Country[]).find((country: Country) => country.alpha3Code === code);
   };
 
   return (
